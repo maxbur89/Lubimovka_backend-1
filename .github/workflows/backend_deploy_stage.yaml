@@ -74,9 +74,9 @@ jobs:
           labels: runnumber=${GITHUB_RUN_ID}
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ REP_OWNER }}/${{ env.IMAGE_NAME }}:stage,
-            ${{ env.REGISTRY }}/${{ REP_OWNER }}/${{ env.IMAGE_NAME }}:latest,
-            ${{ env.REGISTRY }}/${{ REP_OWNER }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ env.REGISTRY }}/${{ env.REP_OWNER }}/${{ env.IMAGE_NAME }}:stage,
+            ${{ env.REGISTRY }}/${{ env.REP_OWNER }}/${{ env.IMAGE_NAME }}:latest,
+            ${{ env.REGISTRY }}/${{ env.REP_OWNER }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
 
   deploy:
     name: Deploy changes on server
